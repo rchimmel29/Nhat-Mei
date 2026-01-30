@@ -1,24 +1,25 @@
 :root {
-    --color-bg: #141414;
-    --color-surface: #202020;
-    --color-text-primary: #F0F0F0;
-    --color-text-secondary: #B0B0B0;
-    --color-accent: #00BFFF;
-    --color-cta: #FF69B4;
-    --color-border: #333333;
-    --color-success: #00FF7F;
+    --color-bg: #0F1419;
+    --color-surface: #1A1F2E;
+    --color-text-primary: #E8EAED;
+    --color-text-secondary: #9DA5B0;
+    --color-accent: #4DA6FF;
+    --color-cta: #FF7B9C;
+    --color-border: #2D3447;
+    --color-success: #4CAF50;
     
-    --spacing-xs: 10px;
-    --spacing-sm: 20px;
-    --spacing-md: 30px;
-    --spacing-lg: 50px;
-    --spacing-xl: 80px;
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 40px;
+    --spacing-xl: 60px;
     
     --border-radius-sm: 8px;
     --border-radius-md: 12px;
     --border-radius-lg: 20px;
     
     --container-padding: 20px;
+    --font-headings: 'Truculenta', sans-serif;
 }
 
 /* Reset */
@@ -36,10 +37,14 @@ body {
     font-family: 'Inter', sans-serif;
     background: var(--color-bg);
     color: var(--color-text-primary);
-    line-height: 1.6;
+    line-height: 1.7;
     overflow-x: hidden;
+    font-size: 16px;
 }
-
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headings);
+    color: var(--color-text-primary);
+}
 /* Container */
 .container {
     max-width: 1200px;
@@ -152,26 +157,32 @@ body {
 }
 
 .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: var(--spacing-sm);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    line-height: 1.2;
+    font-weight: 800;
 }
 
 .role {
     color: var(--color-accent);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: var(--spacing-sm);
+    letter-spacing: 0.3px;
+    font-family: "Lexend", sans-serif;
 }
 
 .tagline {
     color: var(--color-text-secondary);
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto var(--spacing-md);
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    font-weight: 400;
 }
 
 .slogan {
@@ -185,17 +196,22 @@ body {
 
 /* Section Titles */
 h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: var(--spacing-sm);
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 10px 0;
 }
 
 .section-intro {
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-lg);
-    max-width: 800px;
+    max-width: 900px;
+    font-size: 1.1rem;
+    line-height: 1.7;
 }
 
 /* Slider */
@@ -485,8 +501,9 @@ h2 {
 
 .experience-section h3 {
     color: var(--color-text-primary);
-    margin-bottom: var(--spacing-sm);
-    font-size: 1.3rem;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .experience-list {
@@ -494,11 +511,13 @@ h2 {
 }
 
 .experience-list li {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
     color: var(--color-text-secondary);
     display: flex;
     align-items: flex-start;
-    gap: 10px;
+    gap: 12px;
+    font-size: 1.05rem;
+    line-height: 1.7;
 }
 
 .experience-list li i {
@@ -514,12 +533,13 @@ h2 {
     color: var(--color-text-primary);
     margin-bottom: var(--spacing-lg);
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .values-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--spacing-md);
 }
 
@@ -529,6 +549,9 @@ h2 {
     background: rgba(0, 191, 255, 0.1);
     border-radius: var(--border-radius-md);
     border: 1px solid rgba(0, 191, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .value-item i {
@@ -540,11 +563,14 @@ h2 {
 .value-item h4 {
     color: var(--color-text-primary);
     margin-bottom: var(--spacing-xs);
+    font-size: 1.15rem;
+    font-weight: 700;
 }
 
 .value-item p {
     color: var(--color-text-secondary);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 /* Pricing Section */
@@ -747,9 +773,13 @@ h2 {
     padding: var(--spacing-xl) 0;
     background: var(--color-surface);
 }
-
+.important{
+    color: var(--color-cta);
+    margin-right: 5px;
+}
 .contact-grid {
-    display: grid;
+    display: flex;
+    justify-content: center;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xl);
     margin-top: var(--spacing-lg);
@@ -1042,7 +1072,8 @@ h2 {
     .contact-grid {
         grid-template-columns: 1fr;
     }
-    
+    .experience-list-text{ font-size: 1.1rem;
+    }
     .image-container {
         height: 350px;
     }
@@ -1059,6 +1090,9 @@ h2 {
 @media (max-width: 768px) {
     .main-nav {
         display: none;
+    }
+    .experience-list-text li {
+        font-size: 1rem;
     }
     
     .mobile-menu-btn {
@@ -1093,6 +1127,26 @@ h2 {
         grid-template-columns: 1fr;
     }
     
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .value-item {
+        padding: var(--spacing-sm);
+    }
+    
+    .value-item i {
+        font-size: 1.5rem;
+    }
+    
+    .value-item h4 {
+        font-size: 0.95rem;
+    }
+    
+    .value-item p {
+        font-size: 0.85rem;
+    }
+    
     .footer-content {
         flex-direction: column;
         gap: var(--spacing-md);
@@ -1117,9 +1171,12 @@ h2 {
         --spacing-md: 20px;
         --container-padding: 15px;
     }
-    
+    .experience-list-text li {
+        font-size: 0.9rem;
+    }
     h2 {
         font-size: 1.5rem;
+        margin-top: 20px;
     }
     
     .hero-logo {
@@ -1153,6 +1210,36 @@ h2 {
     
     .amount {
         font-size: 2rem;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .value-item {
+        padding: var(--spacing-sm);
+    }
+    
+    .value-item i {
+        font-size: 1.5rem;
+    }
+    
+    .value-item h4 {
+        font-size: 0.9rem;
+    }
+    
+    .value-item p {
+        font-size: 0.8rem;
+    }
+    
+    .about-box {
+        padding: var(--spacing-md);
+    }
+    
+    .experience-section h3,
+    .values-section h3 {
+        font-size: 1.1rem;
+        margin-bottom: var(--spacing-md);
     }
 }
 
