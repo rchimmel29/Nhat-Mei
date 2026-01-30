@@ -787,6 +787,7 @@ h2 {
 
 .contact-card {
     display: flex;
+    justify-content: center;
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
     padding: var(--spacing-md);
